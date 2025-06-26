@@ -1,0 +1,43 @@
+User Login 
+POST
+http://localhost:9311/api/auth/login
+
+{
+  "username": "alice",
+  "password": "password1"
+}
+
+Generated Token
+
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZSIsImlhdCI6MTc1MDkyNTkxNywiZXhwIjoxNzUwOTYxOTE3fQ.kru6lRJy970FSpwmvJPOps84WZjCGJc04wCpncnvn2s
+
+go to Authorization Select Bearer token 
+paste this token their after that
+
+Add books
+POST
+
+http://localhost:2000/books
+
+{
+  "isbn": "9780134685991",
+  "title": "Effective Java",
+  "author": "Joshua Bloch",
+  "publicationYear": 2018
+}
+
+Update Books
+PUT
+http://localhost:2000/books/9780134685991
+
+{
+  "isbn": "9780134685991",
+  "title": "Effective Java (3rd Edition)",
+  "author": "Joshua Bloch",
+  "publicationYear": 2019
+}
+
+
+Delete Book
+DELETE
+http://localhost:2000/books/9780134685991
